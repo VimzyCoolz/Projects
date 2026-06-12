@@ -320,8 +320,8 @@ following
 ---
 
 # 9. Profile 
-#9.1)app profile
-#9.2)manage CoolzTech account
+# 9.1)app profile
+# 9.2)manage CoolzTech account
 
 Profile is purely user-side:
 
@@ -344,77 +344,7 @@ Tabs:
 
 ---
 
-# 10. Content Model (Important Backend Insight)
-
-You now have 3 core entities:
-
-### 1. User
-
-* uploads content
-* follows DJs and users
-
-### 2. DJ Profile (role-based user)
-
-* has content library
-* has followers
-
-### 3. Media Object
-
-```text
-type: movie_mp4 | music_mp3 | music_mp4
-uploader_id
-title
-file_url
-thumbnail
-views
-likes
-created_at
-```
-
----
-
-# 11. Key Product Insight (Important)
-
-Your system is no longer a “streaming app.”
-
-It is structurally closer to:
-
-> A **creator-driven media distribution network with DJ curation layers**
-
-The critical differentiator:
-
-* Movies are not “owned catalog items”
-* They are **reinterpretations / compilations / DJ-curated media streams**
-
----
-
-# 12. What You Removed (Corrected)
-
-✔ Admin UI removed (good decision)
-✔ Centralized admin dashboard is separate system
-✔ App becomes purely consumer + creator platform
-
----
-
-# 13. Risk You Should Be Aware Of (important)
-
-This model introduces:
-
-* Copyright exposure (movie uploads especially)
-* Storage scaling costs (MP4 heavy)
-* Moderation complexity (community uploads)
-
-So your backend design must assume:
-
-* file transcoding pipeline
-* moderation queue (even if separate system later)
-* CDN streaming architecture
-
----
-
-
-
-# 14. NOTE BETTER(NB)
+# 10. NOTE BETTER(NB)
 * the pack will also be displayed the same way as single but the difference will only come with its own badge saying [x number packed] example [6 packed]. also all those 6 packed will take the thumbnail of the file episode
 * addation feature- add 'report' button on each of the movies. when report is clicked prompt prefilled cause of report, this are 'report copyright strike','adult content','others' if copyright strike is selected request the reporter to upload his legal claim that this content is his. when adult content is report is claimed send the claim to the administative system(which will come later) which if found guilty the admin can send a warning to the uploader to set it to 16+
 * When an uploader fills out the form, typing the DJ name should auto-suggest verified DJs. If a DJ profile is "Managed" (verified via your ID/License flow), the system should optionally allow the manager to set permissions
