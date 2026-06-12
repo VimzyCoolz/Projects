@@ -2,18 +2,18 @@
  ---
 
 # 1. TABS(bottom)
-   *Home
-   *Share
-   *profile
-   *inbox
-   *3lines hamburger 'menu'
-```
-home-upload-profile-inbox-menu:these tabs must appear written and iconed ie icon on top and name below it.
-```                          
+     *Home
+     *Share
+    *profile
+    *inbox
+    *3lines hamburger 'menu'
+      ```
+    home-upload-profile-inbox-menu:these tabs must appear written and iconed ie icon on top and name below it.
+      ```                          
 ---                          
    
 # 2. SUBTABS.
-*2.0 Home  
+    *2.0 Home  
            *Memes for you
            *Quotes for you
            *following
@@ -22,7 +22,7 @@ home-upload-profile-inbox-menu:these tabs must appear written and iconed ie icon
 on home tab there will be full search bar button suggesting what user may like to search particularly on that post. like how TikTok search behaves. still on home-top left there will be a name Memelord and it's logo then next to it is search bar
 ```
 ---
-*2.1 Share *upload from device (accept multiple photo uploads and remember to sort them one full view each ie scrollable horizontally and indicate which one is on the view ie 2/5. we can also indicate auto switch for multi photo posts after 5 seconds)
+    *2.1 Share *upload from device (accept multiple photo uploads and remember to sort them one full view each ie scrollable horizontally and indicate which one is on the view ie 2/5. we can also indicate auto switch for multi photo posts after 5 seconds)
        *generate(this page will have text editor and background colour change. like that of facebook).
        
  ```
@@ -31,7 +31,7 @@ when user clicks next, ask them"upload to","1.Meme 2.quotes 3.status" if they se
        *User can select meme or quote and status ie 1&3 or 2&3. in short only status can be compatible with memes and quotes
 ```
 ---
-*2.2 Profile 
+    *2.2 Profile 
     *here you will show 
       *1.profile picture 
       *2.Bio 
@@ -48,13 +48,13 @@ when user clicks next, ask them"upload to","1.Meme 2.quotes 3.status" if they se
         *make this profile icon slightly larger than the other icons because it's at the center
 ```
 ---
-*2.3 inbox 
+    *2.3 inbox 
         *any communication made must be visible here also whether it's email,push or inapp notification.  
        *notify user about "new comment,like,follow,users who marked their video as favourite,downloaded or shared. the notification               should look like this {user}liked your video
        *auto deleted after 14days. but if the day to be deleted has come and user have not read the notification, it will also be deleted         but sent as email instead.
        *all likes,comment should be sent to user's phone push notifications as well.     
 ---       
-*2.4 3lines humburger 'menu' 
+    *2.4 3lines humburger 'menu' 
                                     *Settings *dark/light mode toggle
                                     *edit profile+password
                                     *show/hide online status
@@ -68,40 +68,38 @@ when user clicks next, ask them"upload to","1.Meme 2.quotes 3.status" if they se
 
 
 # 3.          NOTE BETTER
-*3.1. What will be included on each post is main (like,comment,share,download), hiden on 3dots menu (report,favourite,repost,sound used(show sound by default) ) user's name (blue and bold, capitalized)with a "follow"blue function which  font should be different with that of the username eg VIMZYCOOLZ•follow and VIMZYCOOLZ•following VIMZYCOOLZ•friends respectively and where appropriate 
-*3.2. when user download it ,it should be saved together with watermark of app name and uploaders user's name eg Memelord@VimzyCoolz this should be blurred because it should appear vertically from bottom left to top right)
-*3.3. detect when screenshot is taken inside the app. when it detect someone trying to screenshot offer them "we prefer you downloading the post because of high quality and originality" then offer a download button
-*3.4. the posts should not be sorted in latest form unless the algorithm suggest it. the app should have it's algorithm (like that of TikTok)
-*3.5. Admin is the one to upload sounds
-*3.6. Make sure the app will be compatible with another app(Memelord Controll)-this will be the admin of the app
-*3.7. This app will be AI powered.(like that of X where people type @grok for it to answer.) but mine will be @intelix. when verified user type "@intelix" then prompt in comment section the ai should reply to that comment. only when the user is verified
-*3.8. Algorithm should give automatically blue verified badge for users who hit 10,000 followers(or any other that the controll app will set) and the account must be 5month old and have not less than 80% account health
-*3.9. blue verified badge is for automatically verified, golden verified badge is only given by controll app
-*3.10. CEO username will have golden name and a blue verified badge
-*3.11. we will use Gmail API refresh token as email service.
-*3.12. user should not be locked in uploading screen, but also should not be blind of where their posts have reached to uploaded, so we will implement small uploading bar on top of home until the upload is complete 
-*3.13. when users long press any of the engagement buttons eg like/comment the function to open is to show users who have engaged to that button eg if I long press like button I will see people who have liked that particular post
-*3.14. accept name/underscores/numbers/fullstop/space only on username/signup
-*3.15. Signup will use email/username/password/bio/profile photo. send otp through email(Gmail refresh token). 
+    *3.1. What will be included on each post is main (like,comment,share,download), hiden on 3dots menu (report,favourite,repost,sound used(show sound by default) ) user's name (blue and bold, capitalized)with a "follow"blue function which  font should be different with that of the username eg VIMZYCOOLZ•follow and VIMZYCOOLZ•following VIMZYCOOLZ•friends respectively and where appropriate 
+    *3.2. when user download it ,it should be saved together with watermark of app name and uploaders user's name eg Memelord@VimzyCoolz this should be blurred because it should appear vertically from bottom left to top right)
+    *3.3. detect when screenshot is taken inside the app. when it detect someone trying to screenshot offer them "we prefer you downloading the post because of high quality and originality" then offer a download button
+    *3.4. the posts should not be sorted in latest form unless the algorithm suggest it. the app should have it's algorithm (like that of TikTok)
+    *3.5. Admin is the one to upload sounds
+    *3.6. Make sure the app will be compatible with another app(Memelord Controll)-this will be the admin of the app
+    *3.7. This app will be AI powered.(like that of X where people type @grok for it to answer.) but mine will be @intelix. when verified user type "@intelix" then prompt in comment section the ai should reply to that comment. only when the user is verified
+    *3.8. Algorithm should give automatically blue verified badge for users who hit 10,000 followers(or any other that the controll app will set) and the account must be 5month old and have not less than 80% account health
+    *3.9. blue verified badge is for automatically verified, golden verified badge is only given by controll app
+    *3.10. CEO username will have golden name and a blue verified badge
+    *3.11. we will use Gmail API refresh token as email service.
+    *3.12. user should not be locked in uploading screen, but also should not be blind of where their posts have reached to uploaded, so we will implement small uploading bar on top of home until the upload is complete 
+    *3.13. when users long press any of the engagement buttons eg like/comment the function to open is to show users who have engaged to that button eg if I long press like button I will see people who have liked that particular post
+    *3.14. accept name/underscores/numbers/fullstop/space only on username/signup
+    *3.15. Signup will use email/username/password/bio/profile photo. send otp through email(Gmail refresh token). 
      *3.15.b for login is 1.username/email 2.password. below password field put a function 'forgot password' which triggered prompt the user to input 1.registered email/username 2.OTP sent to user email 3.change password 4.confirm above password *usernames will be unique and verify if the email/username is inside app's data in real time and when user clicks next field and there is no matched email/username show '{email/username} not registered yet! eg vimzycoolz@coolztech.com not registered yet!
-*3.16. when people share as link, the link should open the post itself as a view on where it's shared
-*3.17. we will connect our ai with duck duck go API so as it can have real time information 
-*3.18. when user likes or favourite a post it should be saved on users phone+cloud for anytime access even with no internet 
-*3.19. searched content should have separate tabs, this includes users,memes,quotes,etc
-*3.20. to elaborate better on 'friends' term used on this app: Incase user A follows user B and user B follow back user A, they became friends, so they can share status. secondly when I say friend's post-this is like filtering his feed to show only posts of users who are his friend.
-*3.21. this is a social meme app, so user's profiles are accessible by clicking the username but only shows public data like posts,reposts,profile picture,followers count, following count, friends etc
-*3.22. online status(small green circle on their profile pictures) should be included defaulted to on
-*3.23. I prefer a very clean and smooth UX and UI because memes require clarity while reading it
-*3.24. the title 'Memelord' should have separate font for each letter and letter 'o' should have two colours green and red. green for online and red for offline
-*3.25. main colours will be black, golden,purple,blue,green(dominant to be black and golden) but free to use others.
-3.26. 5 seconds for splashing image to show. 
+    *3.16. when people share as link, the link should open the post itself as a view on where it's shared
+    *3.17. we will connect our ai with duck duck go API so as it can have real time information 
+    *3.18. when user likes or favourite a post it should be saved on users phone+cloud for anytime access even with no internet 
+    *3.19. searched content should have separate tabs, this includes users,memes,quotes,etc
+    *3.20. to elaborate better on 'friends' term used on this app: Incase user A follows user B and user B follow back user A, they became friends, so they can share status. secondly when I say friend's post-this is like filtering his feed to show only posts of users who are his friend.
+    *3.21. this is a social meme app, so user's profiles are accessible by clicking the username but only shows public data like posts,reposts,profile picture,followers count, following count, friends etc
+    *3.22. online status(small green circle on their profile pictures) should be included defaulted to on
+    *3.23. I prefer a very clean and smooth UX and UI because memes require clarity while reading it
+    *3.24. the title 'Memelord' should have separate font for each letter and letter 'o' should have two colours green and red. green for online and red for offline
+    *3.25. main colours will be black, golden,purple,blue,green(dominant to be black and golden) but free to use others.
+    *3.26. 5 seconds for splashing image to show. 
 
 ---
-
 # 4    Next Project : Memelord Control
- # 4.1 FUNCTIONS OF THIS APP
-*4.1.1. See all users
-*4.1.2. send emails to users(either single or multiple or all)
+# 4.1 FUNCTIONS OF THIS APP
+*4.1.1. See all users *4.1.2. send emails to users(either single or multiple or all)
 *4.1.3. send push notifications 
 *4.1.4. offer manually verification badge(like that of meta) to the users either blue or golden
 *4.1.5. setting which any user who will hit set of followers will have automatically blue verified badge eg 10,000 followers
