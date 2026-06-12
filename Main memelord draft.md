@@ -1,15 +1,18 @@
- #MemeLord Structure
+ MemeLord Structure
+ ---
 
-#TABS(bottom)
-   •Home
-   •Share
-   •profile
-   •inbox
-   •3lines hamburger 'menu'
-home-upload-profile-inbox-menu:these tabs must appear written and iconed ie icon on top and name below it.                          
-                          
+#1. TABS(bottom)
+   *Home
+   *Share
+   *profile
+   *inbox
+   *3lines hamburger 'menu'
+```
+home-upload-profile-inbox-menu:these tabs must appear written and iconed ie icon on top and name below it.
+```                          
+---                          
    
-# SUBTABS.
+# 2. SUBTABS.
 •Home  >Memes for you
         >Quotes for you
         >following
