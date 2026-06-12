@@ -25,8 +25,8 @@
 
 
   * 2.1 Share
-  * upload from device (accept multiple photo uploads and remember to sort them one full view each ie scrollable horizontally and indicate which one is on the view ie 2/5. we can also indicate auto switch for multi photo posts after 5 seconds)
-       * generate(this page will have text editor and background colour change. like that of facebook).
+     * upload from device (accept multiple photo uploads and remember to sort them one full view each ie scrollable horizontally and indicate which one is on the view ie 2/5. we can also indicate auto switch for multi photo posts after 5 seconds)
+     * generate(this page will have text editor and background colour change. like that of facebook).
        
   ```
 when user clicks next, ask them"upload to","1.Meme 2.quotes 3.status" if they select a meme give them the final stage "to select a sound"(optional) then change next button to "upload". but if they select quote there is no need for sound(this stage{sound stage} will be skipped when they select quote). don't forget to include 'description caption' field(15words) just at where last stage of uploading will be, which will be optional fill then if filled it will appear before the image not under. ie description then photo. we are implementing 15 words limit so as we maintain photo first app
