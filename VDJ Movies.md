@@ -104,7 +104,7 @@ This is the heart of your platform.
 ```text
 What are you uploading?
 
-🎬 Movie DJ (MP4)
+🎬 Movie DJ (MP4)=when selected prompt the user if its Single or packed. if its packed organize it well on the app ie if part 1 ends automatically play part 2. the uploader also can continuously add another part next time on profile tab. allow users to upload as a pack if selected even if it will be a single file.
 🎧 Music DJ (MP3)
 🎧 Music DJ (MP4)
 ```
@@ -332,7 +332,7 @@ phone number
 
 Tabs:
 
-* My uploads
+* My uploads~separate this into two a)single b)packs. inside every single pack enable the uploader to organize them ie which come first and which come next etc. plus add a plus icon next to pack which will be used to continuosly add files to it
 * Watch history
 * Liked content
 * Saved content
