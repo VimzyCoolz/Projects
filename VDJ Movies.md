@@ -120,7 +120,9 @@ Title
 Description
 Tags (optional)
 Thumbnail/cover upload/automatically snap the first flame
-Visibility (Public / Unlisted/followers)
+Visibility
+    *(Public / Unlisted/followers)
+    *Adult/General
 ```
 
 ---
@@ -413,4 +415,5 @@ So your backend design must assume:
 
 
 # 14. NOTE BETTER(NB)
-## the pack will also be displayed the same way as single but the difference will only come with its own badge saying [x number packed] example [6 packed]. also all those 6 packed will take the thumbnail of the file episode
+* the pack will also be displayed the same way as single but the difference will only come with its own badge saying [x number packed] example [6 packed]. also all those 6 packed will take the thumbnail of the file episode
+* addation feature- add 'report' button on each of the movies. when report is clicked prompt prefilled cause of report, this are 'report copyright strike','adult content','others' if copyright strike is selected request the reporter to upload his legal claim that this content is his. when adult content is report is claimed send the claim to the administative system(which will come later) which if found guilty the admin can send a warning to the uploader to set it to 16+
