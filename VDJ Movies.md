@@ -320,8 +320,8 @@ following
 ---
 
 # 9. Profile 
-# 9.1)app profile
-# 9.2)manage CoolzTech account
+   * 9.1)app profile
+   * 9.2)manage CoolzTech account (acquired from CoolzTech shared auth system)
 
 Profile is purely user-side:
 
