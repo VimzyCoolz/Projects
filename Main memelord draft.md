@@ -58,14 +58,14 @@ when user clicks next, ask them"upload to","1.Meme 2.quotes 3.status" if they se
        * all likes,comment should be sent to user's phone push notifications as well.     
       
    * 2.4 3lines humburger 'menu' 
-                                    * Settings *dark/light mode toggle
-                                    * edit profile+password
-                                    * show/hide online status
-                          * privacy policy(this link will be fetched from .env file (memelord_policy).
-                          * show '©CoolzTech' at very bottom 
-                          * Request verification badge through :upload national official document(s), then pay amount set by Controll app      
-                          * intelix guide = this will act as in app guide. this part is open for all users. eg when I ask it "do Memelord                                             have a setting to turn off online status?" it should look at app structure and guide the user                                             appropriately. on this intelix only answer app related questions.     
-                          * display app version
+      * *dark/light mode toggle
+      * edit profile+password
+      * show/hide online status
+      * privacy policy(this link will be fetched from .env file (memelord_policy).
+      * show '©CoolzTech' at very bottom 
+      * Request verification badge through :upload national official document(s), then pay amount set by Controll app      
+      * intelix guide = this will act as in app guide. this part is open for all users. eg when I ask it "do Memelord                                             have a setting to turn off online status?" it should look at app structure and guide the user                                             appropriately. on this intelix only answer app related questions.     
+      * display app version
                           
                           
 
