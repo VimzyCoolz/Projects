@@ -460,9 +460,10 @@ When a regular user is filling out the form (Section 4):
 As they type DJ Af..., a dropdown appears showing DJ Afro ✔ (Verified).
 
 If they select it and the DJ is MODERATED, a small, helpful disclaimer text pops up under the field:
-```
+
 
 ℹ️ This DJ requires content approval. Your upload will go live on the platform once the DJ's management team reviews it.]
+```
 *  The "Pack" UX for Uploaders
 I mention allowing uploaders to organize packs and continuously add files via a + icon on their profile.
 
