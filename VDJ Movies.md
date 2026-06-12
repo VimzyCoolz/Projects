@@ -468,3 +468,6 @@ If they select it and the DJ is MODERATED, a small, helpful disclaimer text pops
 I mention allowing uploaders to organize packs and continuously add files via a + icon on their profile.
 
 The Fix: Ensure that when a new part is added to an existing pack, it triggers a notification to followers of that pack or DJ (e.g., "DJ Afro added Part 4 to 'Action Mix 2026'!").
+
+*DJ Name Collision Problem
+Potential issue: two people may try: DJ Afro DJAFRO Dj Afro DJ-Afro The system should normalize names. Internally: dj_afro Display: DJ Afro .Otherwise you'll end up with duplicate brands.
