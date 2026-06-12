@@ -13,12 +13,11 @@
    
 # 2. SUBTABS.
 
-   **2.0 Home**
-   
-   * 2.0.1 Memes for you
-   * 2.o.2 Quotes for you
-   * 2.0.3 following
-   * 2.04 friends (status on top horizontal in circles then friends post vertically) ie status👉 and posts👇
+   * 2.0 Home
+      * 2.0.1 Memes for you
+      * 2.o.2 Quotes for you
+      * 2.0.3 following
+      * 2.04 friends (status on top horizontal in circles then friends post vertically) ie status👉 and posts👇
 
    ```
     on home tab there will be full search bar button suggesting what user may like to search particularly on that post. like how TikTok search behaves. still on home-top left there will be a name Memelord and it's logo then next to it is search bar
@@ -36,7 +35,7 @@ when user clicks next, ask them"upload to","1.Meme 2.quotes 3.status" if they se
 ```
 
    * 2.2 Profile 
-    * here you will show 
+      * here you will show 
       * 1.profile picture 
       * 2.Bio 
       * 3.followimg 
