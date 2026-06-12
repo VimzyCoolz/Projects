@@ -1,7 +1,7 @@
  MemeLord Structure
  
 # 1. TABS(bottom)
-   *Home
+   * Home
      *Share
     *profile
     *inbox
