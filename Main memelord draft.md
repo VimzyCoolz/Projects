@@ -13,7 +13,8 @@ home-upload-profile-inbox-menu:these tabs must appear written and iconed ie icon
 ---                          
    
 # 2. SUBTABS.
-*2.0 Home  *Memes for you
+*2.0 Home  
+           *Memes for you
            *Quotes for you
            *following
            *friends (status on top horizontal in circles then friends post vertically) ie status👉 and posts👇
@@ -47,12 +48,14 @@ when user clicks next, ask them"upload to","1.Meme 2.quotes 3.status" if they se
         *make this profile icon slightly larger than the other icons because it's at the center
 ```
 ---
-*2.3 inbox *any communication made must be visible here also whether it's email,push or inapp notification.  
+*2.3 inbox 
+        *any communication made must be visible here also whether it's email,push or inapp notification.  
        *notify user about "new comment,like,follow,users who marked their video as favourite,downloaded or shared. the notification               should look like this {user}liked your video
        *auto deleted after 14days. but if the day to be deleted has come and user have not read the notification, it will also be deleted         but sent as email instead.
        *all likes,comment should be sent to user's phone push notifications as well.     
 ---       
-*2.4 3lines humburger 'menu' *Settings *dark/light mode toggle
+*2.4 3lines humburger 'menu' 
+                                    *Settings *dark/light mode toggle
                                     *edit profile+password
                                     *show/hide online status
                           *privacy policy(this link will be fetched from .env file (memelord_policy).
