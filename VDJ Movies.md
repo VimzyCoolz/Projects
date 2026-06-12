@@ -421,6 +421,48 @@ So your backend design must assume:
    * "Allow anyone to upload to my brand"
    *  'Allow anyone to upload to my brand but require my approval before it shows on my official DJ profile'
    *  Only you can upload with that brand(the username managing the Brand)
+ ```text
+         descriprion
+         Scenario A: The DJ Brand is "OPEN" (Allow anyone to upload to my brand)
+       The Flow: The system behaves exactly like your original plan. The video bypasses hurdles, publishes instantly, and appears on both the general feed and the DJ's profile page.
+
+      Scenario B: The DJ Brand is "MODERATED" (Require my approval...)
+      The Flow: 1. The video uploads successfully, but its status is set to PENDING_DJ_APPROVAL.
+2. Where it shows: It is hidden from the DJ's official profile page and the primary search results. However, you can choose to let it appear on the Uploader's profile tab under "My Uploads" with a pending badge.
+3. The Notification: The DJ Manager gets a notification: "User X uploaded 'Action Mix Part 3' to your brand. Review to approve or reject."
+4. The Action: Once approved by the manager, the status changes to PUBLISHED, and it instantly populates the DJ’s official profile tabs.
+
+Scenario C: The DJ Brand is "RESTRICTED" (Only the manager can upload...)
+The UI Prevention: If an uploader types a DJ name that is restricted, the UI should immediately flag it before they even hit upload.
+
+The Flow: * If the logged-in uploader_id matches the manager_id, the upload proceeds.
+
+If a regular user tries to force-upload via the API using that DJ name, the backend rejects it with a 403 Forbidden error: "This DJ profile is private. Only the verified manager can upload content under this brand."
+
+📱 UI/UX Enhancements for the DJ Profile
+To support this new logic, the DJ Profile Page (Section 5) managed by a verified user needs an administrative sub-tab or action center.
+
+The DJ Manager's Dashboard (Visible only to the Manager)
+When the manager visits the DJ profile they own, they should see an "Approvals Queue" tab if they are in MODERATED mode:
+
+Plaintext
+🔒 Manager Control Panel
+Settings: [🔘 Open | 🔘 Moderated | 🔘 Restricted]
+
+Pending Approvals (3):
+--------------------------------------------------
+[Thumbnail] "Best of 2026 Mix" by @uploader_sam
+[ Approve 👍 ]  [ Reject ❌ ]
+--------------------------------------------------
+The Upload Form Experience
+When a regular user is filling out the form (Section 4):
+
+As they type DJ Af..., a dropdown appears showing DJ Afro ✔ (Verified).
+
+If they select it and the DJ is MODERATED, a small, helpful disclaimer text pops up under the field:
+```
+
+ℹ️ This DJ requires content approval. Your upload will go live on the platform once the DJ's management team reviews it.]
 *  The "Pack" UX for Uploaders
 I mention allowing uploaders to organize packs and continuously add files via a + icon on their profile.
 
