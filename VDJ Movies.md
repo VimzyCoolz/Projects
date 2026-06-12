@@ -412,4 +412,5 @@ So your backend design must assume:
 
 
 
-Just pick direction.
+#NOTE BETTER(NB)
+##the pack will also be displayed the same way as single but the difference will only come with its own badge saying [x number packed] example [6 packed]. also all those 6 packed will take the thumbnail of the file episode
