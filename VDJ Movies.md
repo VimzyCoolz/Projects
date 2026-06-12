@@ -417,3 +417,7 @@ So your backend design must assume:
 # 14. NOTE BETTER(NB)
 * the pack will also be displayed the same way as single but the difference will only come with its own badge saying [x number packed] example [6 packed]. also all those 6 packed will take the thumbnail of the file episode
 * addation feature- add 'report' button on each of the movies. when report is clicked prompt prefilled cause of report, this are 'report copyright strike','adult content','others' if copyright strike is selected request the reporter to upload his legal claim that this content is his. when adult content is report is claimed send the claim to the administative system(which will come later) which if found guilty the admin can send a warning to the uploader to set it to 16+
+* When an uploader fills out the form, typing the DJ name should auto-suggest verified DJs. If a DJ profile is "Managed" (verified via your ID/License flow), the system should optionally allow the manager to set permissions
+   * "Allow anyone to upload to my brand"
+   *  'Allow anyone to upload to my brand but require my approval before it shows on my official DJ profile'
+   *  Only you can upload with that brand(the username managing the Brand)
