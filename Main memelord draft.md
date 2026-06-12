@@ -1,37 +1,36 @@
  MemeLord Structure
- ---
-
+ 
 # 1. TABS(bottom)
-     *Home
+   *Home
      *Share
     *profile
     *inbox
     *3lines hamburger 'menu'
-      ```
+     
     home-upload-profile-inbox-menu:these tabs must appear written and iconed ie icon on top and name below it.
-      ```                          
----                          
+                             
+                        
    
 # 2. SUBTABS.
-    *2.0 Home  
+   *2.0 Home  
            *Memes for you
            *Quotes for you
            *following
            *friends (status on top horizontal in circles then friends post vertically) ie status👉 and posts👇
-```
+
 on home tab there will be full search bar button suggesting what user may like to search particularly on that post. like how TikTok search behaves. still on home-top left there will be a name Memelord and it's logo then next to it is search bar
-```
----
-    *2.1 Share *upload from device (accept multiple photo uploads and remember to sort them one full view each ie scrollable horizontally and indicate which one is on the view ie 2/5. we can also indicate auto switch for multi photo posts after 5 seconds)
+
+
+  *2.1 Share *upload from device (accept multiple photo uploads and remember to sort them one full view each ie scrollable horizontally and indicate which one is on the view ie 2/5. we can also indicate auto switch for multi photo posts after 5 seconds)
        *generate(this page will have text editor and background colour change. like that of facebook).
        
- ```
+ 
 when user clicks next, ask them"upload to","1.Meme 2.quotes 3.status" if they select a meme give them the final stage "to select a sound"(optional) then change next button to "upload". but if they select quote there is no need for sound(this stage{sound stage} will be skipped when they select quote). don't forget to include 'description caption' field(15words) just at where last stage of uploading will be, which will be optional fill then if filled it will appear before the image not under. ie description then photo. we are implementing 15 words limit so as we maintain photo first app
        *Status will be shared to only users who follow each other. status expire after 24hours.
        *User can select meme or quote and status ie 1&3 or 2&3. in short only status can be compatible with memes and quotes
-```
----
-    *2.2 Profile 
+
+
+   *2.2 Profile 
     *here you will show 
       *1.profile picture 
       *2.Bio 
@@ -43,18 +42,18 @@ when user clicks next, ask them"upload to","1.Meme 2.quotes 3.status" if they se
       *8.reposts
       *9'account health' in percentage. eg the one with 0 report has 100%health and the one with 50reports have 0%health-this is                    automatically banned.
       *10 show metric button. this feature will show the user how their post are performing. eg how many followers they had on that                 post,likes,view, are they rising or dropping? through metric graphs.
-   ```
-        when user signin/up change profile icon to user's profile picture.
+   
+   when user signin/up change profile icon to user's profile picture.
         *make this profile icon slightly larger than the other icons because it's at the center
-```
----
-    *2.3 inbox 
+
+
+   *2.3 inbox 
         *any communication made must be visible here also whether it's email,push or inapp notification.  
        *notify user about "new comment,like,follow,users who marked their video as favourite,downloaded or shared. the notification               should look like this {user}liked your video
        *auto deleted after 14days. but if the day to be deleted has come and user have not read the notification, it will also be deleted         but sent as email instead.
        *all likes,comment should be sent to user's phone push notifications as well.     
----       
-    *2.4 3lines humburger 'menu' 
+      
+   *2.4 3lines humburger 'menu' 
                                     *Settings *dark/light mode toggle
                                     *edit profile+password
                                     *show/hide online status
@@ -67,7 +66,7 @@ when user clicks next, ask them"upload to","1.Meme 2.quotes 3.status" if they se
                           
 
 
-# 3.          NOTE BETTER
+#3         NOTE BETTER
     *3.1. What will be included on each post is main (like,comment,share,download), hiden on 3dots menu (report,favourite,repost,sound used(show sound by default) ) user's name (blue and bold, capitalized)with a "follow"blue function which  font should be different with that of the username eg VIMZYCOOLZ•follow and VIMZYCOOLZ•following VIMZYCOOLZ•friends respectively and where appropriate 
     *3.2. when user download it ,it should be saved together with watermark of app name and uploaders user's name eg Memelord@VimzyCoolz this should be blurred because it should appear vertically from bottom left to top right)
     *3.3. detect when screenshot is taken inside the app. when it detect someone trying to screenshot offer them "we prefer you downloading the post because of high quality and originality" then offer a download button
@@ -96,7 +95,7 @@ when user clicks next, ask them"upload to","1.Meme 2.quotes 3.status" if they se
     *3.25. main colours will be black, golden,purple,blue,green(dominant to be black and golden) but free to use others.
     *3.26. 5 seconds for splashing image to show. 
 
----
+
 # 4    Next Project : Memelord Control
 # 4.1 FUNCTIONS OF THIS APP
 *4.1.1. See all users *4.1.2. send emails to users(either single or multiple or all)
@@ -112,8 +111,7 @@ when user clicks next, ask them"upload to","1.Meme 2.quotes 3.status" if they se
 *4.1.11. set verification amount for users who request it manually
 
 
----
-```
+
 #   Fetched Pro tips along my investigations
 1. Do not "Hard Delete" status files immediately at 24 hours. Mark them as expired in the DB and use a Cron Job to batch-delete the actual media files from your storage bucket during low-traffic hours to save on I/O costs.
 2. Pro Tip: The Master Moderation MatrixFinal Power = (Tier Base %) × (Behavior Multiplier) Tier Base %: Impact scales by seniority and status—0.5% for New Users (<14 days), 1% for Established (>14 days), 1.5% for Veterans (>30 days), 2% for Blue Verified, and 30% for Golden/CEO status. Behavior Multiplier: Your accuracy modifies your power—2.0x for "Good Samaritans" (confirmed reports), 1.0x for Neutral, and 0.5x for Trolls (false reports). In short that is how different users can reduce account health of user reported. same apply to post reposts
@@ -123,4 +121,4 @@ when user clicks next, ask them"upload to","1.Meme 2.quotes 3.status" if they se
 6. Implement Reporter Reputation. A report from a user with 100% health should carry more weight than a report from a new account or one with low health.
 7. Since you want diagonal, semi-transparent watermarks, you shouldn't do this on the client side (phone) because it's CPU-intensive and can be bypassed. Production Path: Use a Serverless Function (AWS Lambda or Supabase Edge Function). When a user uploads, the function processes the image using a library like sharp, applies the watermark, and then saves it to storage.
 8. Recommendation: Use a tiny, native ActivityIndicator (the spinning wheel) that only shows up during the very first download(splash screen). Once the file is cached, you never show that spinner again
-```
+
