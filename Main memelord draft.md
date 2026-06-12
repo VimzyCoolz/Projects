@@ -12,7 +12,7 @@
   ---                      
    
 # 2. SUBTABS.
-   * 2.0 Home  
+   ** 2.0 Home **
    * 2.0.1 Memes for you
    * 2.o.2 Quotes for you
    * 2.0.3 following
