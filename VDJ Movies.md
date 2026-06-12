@@ -70,9 +70,11 @@ Views[it should be 50% continuous watch count • Time&year.month uploaded
 Curators section:
 
 ```text
+Trending Dj
 DJ Afro
 DJ Smith
 DJ Xtreme
+NB:This are just example, this should refrect the dj names used on actual system
 ```
 
 Each opens their personal content page.
