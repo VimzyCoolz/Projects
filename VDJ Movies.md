@@ -421,3 +421,7 @@ So your backend design must assume:
    * "Allow anyone to upload to my brand"
    *  'Allow anyone to upload to my brand but require my approval before it shows on my official DJ profile'
    *  Only you can upload with that brand(the username managing the Brand)
+*  The "Pack" UX for Uploaders
+I mention allowing uploaders to organize packs and continuously add files via a + icon on their profile.
+
+The Fix: Ensure that when a new part is added to an existing pack, it triggers a notification to followers of that pack or DJ (e.g., "DJ Afro added Part 4 to 'Action Mix 2026'!").
