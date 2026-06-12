@@ -1,4 +1,4 @@
-Correct—this is not a Netflix-style closed catalog. It’s a **community-driven “VDJ ecosystem”** where content is uploaded and curated by DJs (e.g., DJ Afro–style curators). That changes the entire product structure: it becomes closer to a hybrid of **YouTube + TikTok + streaming library**, but centered on *curated movie/music mixes*.
+this is a **community-driven “VDJ ecosystem”** where content is uploaded and curated by DJs (e.g., DJ Afro–style curators). That changes the entire product structure: it becomes closer to a hybrid of **YouTube + TikTok + streaming library**, but centered on *curated movie/music mixes*.
 
 I’ll correct the architecture accordingly and remove assumptions that don’t fit.
 
