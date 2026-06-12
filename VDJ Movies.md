@@ -37,7 +37,7 @@ Bottom navigation becomes:
 
 # 3. Home Screen
 
-Home is a **content discovery feed**, not a catalog.
+Home is a **content discovery feed**, plus a catalog.
 
 ### Sections:
 
@@ -45,10 +45,16 @@ Home is a **content discovery feed**, not a catalog.
 
 Horizontal scroll:
 
-```text
-[DJ Afro Movie Mix] [DJ Smith Action Pack] [DJ X Comedy Cut]
-```
 
+```text
+[recommndation ] [recommendation] [recommendation]
+```
+```text
+ACTION
+[ Recomendation] [recomendation] [ recomendation]
+
+other genres the same
+```
 ---
 
 ### 🆕 Latest Uploads
