@@ -466,8 +466,10 @@ If they select it and the DJ is MODERATED, a small, helpful disclaimer text pops
 ```
 *  The "Pack" UX for Uploaders
 I mention allowing uploaders to organize packs and continuously add files via a + icon on their profile.
-
 The Fix: Ensure that when a new part is added to an existing pack, it triggers a notification to followers of that pack or DJ (e.g., "DJ Afro added Part 4 to 'Action Mix 2026'!").
 
-*DJ Name Collision Problem
+* DJ Name Collision Problem
 Potential issue: two people may try: DJ Afro DJAFRO Dj Afro DJ-Afro The system should normalize names. Internally: dj_afro Display: DJ Afro .Otherwise you'll end up with duplicate brands.
+
+* If an uploader sends a 1.5GB movie pack to your Node backend, do not use fs.readFile() or store the file in memory (Buffer). If two users upload at the same time, your server will hit an Out-Of-Memory (OOM) crash instantly.
+Instead, you must use Streams. You stream the data directly from the incoming HTTP request from the mobile app, and pipe it straight into the outgoing HTTP/MTProto request to Telegram. The file simply "flows" through your server’s RAM like water through a pipe, using only a few megabytes of memory.
