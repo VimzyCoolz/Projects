@@ -403,3 +403,4 @@ Potential issue: two people may try: DJ Afro DJAFRO Dj Afro DJ-Afro The system s
 
 * If an uploader sends a 1.5GB movie pack to your Node backend, do not use fs.readFile() or store the file in memory (Buffer). If two users upload at the same time, your server will hit an Out-Of-Memory (OOM) crash instantly.
 Instead, you must use Streams. You stream the data directly from the incoming HTTP request from the mobile app, and pipe it straight into the outgoing HTTP/MTProto request to Telegram. The file simply "flows" through your server’s RAM like water through a pipe, using only a few megabytes of memory.
+* we will use postgres,node.js,CoolzTechAuth SDK as auth ie login/signup, telegram as a storage host using client bot not public one, we will have multi-bot workers each with its specific channel to post
