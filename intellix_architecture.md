@@ -259,7 +259,7 @@ Ollama         llama.cpp   OpenRouter   LM Studio
 ```
 
 ## OTHER IMPORTANT INFO
-* JUST FOR MAKING IT CLEAR HUGGINGFACE IS NOT THE ENGINE ITS THE LLM SOURCE
+JUST FOR MAKING IT CLEAR HUGGINGFACE IS NOT THE ENGINE ITS THE LLM SOURCE
 
 ## 🤖 AI Model Architecture
 
@@ -277,7 +277,7 @@ Inference Engines
 - LM Studio
 - llama.cpp
 
-* USER PHILOSOPY
+
 
 ## 🔐 User Ownership
 
@@ -291,4 +291,3 @@ Users own:
 
 Nothing is stored on Intellix servers unless the user explicitly chooses cloud services.
 
-*
