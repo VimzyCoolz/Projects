@@ -86,7 +86,7 @@ Examples:
   then finally
 - Start IDE.
 
-### Responsibilities:
+### Responsibilities of web dashboard and local runtime:
 * Download AI models.(from huggingface)
 * Manage installed models.
 * Start/stop models.
@@ -97,8 +97,15 @@ Examples:
 * Restore workspaces.
 * Manage updates.
 * Connect to cloud providers when the user chooses.
+* Detect workspace.
+*Load configuration.
+*Start inference engine.
+*Stop inference engine.
+*Health monitoring.
+*API server.
+*Version management.
 
-It becomes the web IDE which gets its models locally.
+The Runtime becomes the local execution layer for Intellix IDE.
 
 ---
 
