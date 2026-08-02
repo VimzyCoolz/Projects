@@ -75,7 +75,15 @@ NB://During workspace creation:
 - Choose storage location.
 - Download Runtime.
 - Download inference engine.
-- Choose AI model.(WE WILL USE HUGGINGFACE)
+- Choose model source.
+
+Examples:
+
+- Hugging Face
+- Local Folder
+- USB
+
+  then finally
 - Start IDE.
 
 ### Responsibilities:
