@@ -69,7 +69,7 @@ Supported locations:
 - USB Drive
 - Custom Folder
 
-The workspace is portable between devices. and is created at the beginning(first launch of the site) the workflow download ux will be "import or export your workspace [import] [export]
+The workspace is portable between devices. and is created at the beginning(first launch of the site) the workflow download ux will be "import or Create your workspace [import workspace] [ Create workspace]
 NB://During workspace creation:
 
 - Choose storage location.
