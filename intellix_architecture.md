@@ -93,8 +93,8 @@ Examples:
 * Expose a localhost API.
 * Manage AI memory.
 * Manage projects.
-* Backup workspaces.
-* Restore workspaces.
+* import workspaces.
+* export workspaces.
 * Manage updates.
 * Connect to cloud providers when the user chooses.
 * Detect workspace.
