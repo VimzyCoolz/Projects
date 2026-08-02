@@ -50,7 +50,7 @@ The **Runtime** becomes the center of the system.
 
 Instead of installing multiple components separately, users create or open an Intellix Workspace.
 
-The workspace contains:
+The workspace contains following folders-some will contain files while others will come later time:
 
 - Runtime
 - Inference Engine
@@ -69,7 +69,7 @@ Supported locations:
 - USB Drive
 - Custom Folder
 
-The workspace is portable between devices.
+The workspace is portable between devices. and is created at the beginning(first launch of the site) the workflow download ux will be "import or export your workspace [import] [export]
 
 ### Responsibilities:
 * Download AI models.(from huggingface)
