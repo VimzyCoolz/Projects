@@ -61,7 +61,7 @@ This is your biggest original component.
 * Manage updates.
 * Connect to cloud providers when the user chooses.
 
-It becomes the shared runtime for future **CoolzTech** applications, not just the IDE.
+It becomes the web IDE which gets its models locally.
 
 ---
 
@@ -126,7 +126,7 @@ The Runtime stores workspaces.
 
 ### Example Directory Structure:
 ```text
-Workspace/
+Intelix_Workspace/
 │
 ├── AI/
 ├── Models/
@@ -141,8 +141,8 @@ Users choose where to save it (e.g., SSD, HDD, USB drive, External SSD).
 ---
 
 ## 🔄 Backup & Restore
-* **Instead of:** Connect to Cloud
-* **Use:** 
+* **Instead of:** Connect to Cloud things only
+* **we add this below it:** 
   * 📂 Backup Workspace
   * 📂 Restore Workspace
 
@@ -168,12 +168,12 @@ Cloud is optional. Users may choose Local Runtime or Cloud Provider. Local-first
 ## 🎨 UI Changes
 LLM settings become structured like:
 * **LLM**
-  * **Cloud**
+  * **Cloud**(which already exists on openhands)
     * • OpenRouter
     * • OpenAI
     * • Anthropic
   * **Local**
-    * • Intellix Runtime
+    * • LLM (with download buttons and storage size)
     * • Ollama
     * • LM Studio
     * • llama.cpp
