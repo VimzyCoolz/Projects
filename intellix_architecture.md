@@ -155,14 +155,23 @@ The Runtime stores workspaces.
 
 ### Example Directory Structure:
 ```text
-Intelix_Workspace/
+IntellixWorkspace/
+
+├── Runtime/
+│    ├── Intellix Runtime
+│    └── inference engine
 │
-├── AI/
 ├── Models/
+│
 ├── Projects/
+│
 ├── Memory/
-├── Git/
-└── Settings/
+│
+├── Chat/
+│
+├── Settings/
+│
+└── Cache/
 ```
 
 Users choose where to save it (e.g., SSD, HDD, USB drive, External SSD).
@@ -210,10 +219,9 @@ LLM settings become structured like:
     * • OpenAI
     * • Anthropic
   * **Local**
-    * • LLM (with download buttons and storage size)
-    * • Ollama
-    * • LM Studio
-    * • llama.cpp
+    * • NO NEED TO DOWNLOAD LOCAL AI ENGINES AGAIN SO HERE WE WILL USE IT WHERE USER CAN SEARCH AI MODEL FROM HUGGING FACE AND DOWNLOAD IT TO HIS WORKSPACE
+   
+      
 
 ---
 
@@ -250,4 +258,37 @@ Users provide their own compute. They choose their models, their storage, and th
 Ollama         llama.cpp   OpenRouter   LM Studio
 ```
 
-Eventually, the same Intellix Runtime could power other CoolzTech products beyond the IDE, making it a reusable foundation for your ecosystem rather than an IDE-only component.
+## OTHER IMPORTANT INFO
+* JUST FOR MAKING IT CLEAR HUGGINGFACE IS NOT THE ENGINE ITS THE LLM SOURCE
+
+## 🤖 AI Model Architecture
+
+Model Sources
+
+- Hugging Face
+- Local Folder
+- USB
+- Imported Workspace
+
+Inference Engines
+
+- Intellix Runtime (default)
+- Ollama
+- LM Studio
+- llama.cpp
+
+* USER PHILOSOPY
+
+## 🔐 User Ownership
+
+Users own:
+
+- their models
+- their projects
+- their conversations
+- their AI memory
+- their workspace
+
+Nothing is stored on Intellix servers unless the user explicitly chooses cloud services.
+
+*
