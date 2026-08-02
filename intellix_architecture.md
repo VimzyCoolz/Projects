@@ -288,7 +288,6 @@ Model Sources
 
 Inference Engines
 
-- Intellix Runtime (default)
 - Ollama
 - LM Studio
 - llama.cpp
