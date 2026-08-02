@@ -70,6 +70,13 @@ Supported locations:
 - Custom Folder
 
 The workspace is portable between devices. and is created at the beginning(first launch of the site) the workflow download ux will be "import or export your workspace [import] [export]
+NB://During workspace creation:
+
+- Choose storage location.
+- Download Runtime.
+- Download inference engine.
+- Choose AI model.(WE WILL USE HUGGINGFACE)
+- Start IDE.
 
 ### Responsibilities:
 * Download AI models.(from huggingface)
@@ -162,13 +169,21 @@ Users choose where to save it (e.g., SSD, HDD, USB drive, External SSD).
 
 ---
 
-## 🔄 Backup & Restore
-* **Instead of:** Connect to Cloud things only
-* **we add this below it:** 
-  * 📂 Backup Workspace
-  * 📂 Restore Workspace
+## 🔄 Workspace Management
 
-The Runtime performs the work. The browser only requests it.
+The IDE provides:
+
+• 📂 Create Workspace
+
+• 📂 Open Workspace
+
+• 📦 Export Workspace
+
+• 📥 Import Workspace
+
+The Runtime performs all operations.
+
+The browser simply requests them.
 
 ---
 
