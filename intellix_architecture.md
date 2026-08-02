@@ -50,7 +50,7 @@ The **Runtime** becomes the center of the system.
 This is your biggest original component.
 
 ### Responsibilities:
-* Download AI models.
+* Download AI models.(from huggingface)
 * Manage installed models.
 * Start/stop models.
 * Expose a localhost API.
@@ -88,9 +88,9 @@ The Runtime should support multiple providers.
 * Ollama
 * LM Studio
 * llama.cpp
-* Future Intellix Engine
+* auto detect
 
-### Cloud:
+### Cloud:(this already exist on openhands)
 * OpenRouter
 * OpenAI
 * Anthropic
