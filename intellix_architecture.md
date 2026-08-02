@@ -46,8 +46,30 @@ The **Runtime** becomes the center of the system.
 
 ---
 
-## ⚙️ Intellix Runtime
-This is your biggest original component.
+## 📦 Intellix Workspace
+
+Instead of installing multiple components separately, users create or open an Intellix Workspace.
+
+The workspace contains:
+
+- Runtime
+- Inference Engine
+- AI Models
+- Projects
+- AI Memory
+- Chat History
+- Settings
+- Cache
+
+The user chooses where the workspace is stored.
+
+Supported locations:
+- Internal SSD
+- External SSD
+- USB Drive
+- Custom Folder
+
+The workspace is portable between devices.
 
 ### Responsibilities:
 * Download AI models.(from huggingface)
