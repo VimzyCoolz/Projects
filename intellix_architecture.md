@@ -86,7 +86,7 @@ Examples:
   then finally
 - Start IDE.
 
-### Responsibilities of web dashboard and local runtime:
+### Responsibilities of local runtime:
 * Download AI models.(from huggingface)
 * Manage installed models.
 * Start/stop models.
@@ -128,17 +128,18 @@ No heavy AI work happens inside the browser.
 ## 🤖 AI Models
 The Runtime should support multiple providers.
 
-### Local:
-* OPENAI
-* etc
-* etc
-* etc
+Local
 
-### Cloud:(this already exist on openhands)
-* OpenRouter
-* OpenAI
-* Anthropic
-* Gemini
+• GGUF Models
+• Imported Models
+• Hugging Face Downloads
+
+Cloud
+
+• OpenRouter
+• OpenAI
+• Anthropic
+• Gemini
 
 The IDE never talks directly to these providers.
 
