@@ -122,10 +122,10 @@ No heavy AI work happens inside the browser.
 The Runtime should support multiple providers.
 
 ### Local:
-* Ollama
-* LM Studio
-* llama.cpp
-* auto detect
+* OPENAI
+* etc
+* etc
+* etc
 
 ### Cloud:(this already exist on openhands)
 * OpenRouter
