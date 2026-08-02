@@ -274,8 +274,70 @@ Users provide their own compute. They choose their models, their storage, and th
 Ollama         llama.cpp   OpenRouter   LM Studio
 ```
 
-## OTHER IMPORTANT INFO
-JUST FOR MAKING IT CLEAR HUGGINGFACE IS NOT THE ENGINE ITS THE LLM SOURCE
+## 📌 Other Important Components
+
+### ⚙️ Configuration
+
+Each workspace contains a configuration file that allows Intellix Runtime to restore the user's environment automatically.
+
+Example:
+
+```text
+IntellixWorkspace/
+
+├── Runtime/
+├── Models/
+├── Projects/
+├── Memory/
+├── Chat/
+├── Settings/
+├── Plugins/
+├── Cache/
+└── config.json
+```
+
+Example `config.json`:
+
+```json
+{
+  "workspaceVersion": 1,
+  "runtimeVersion": "1.0.0",
+  "engine": "llama.cpp",
+  "selectedModel": "Qwen3-Coder-30B",
+  "modelPath": "Models/Qwen3-Coder.gguf",
+  "workspaceName": "My Workspace",
+  "theme": "dark"
+}
+```
+
+The Runtime reads this file during startup to automatically restore the user's workspace.
+
+---
+
+### 🔌 Plugins
+
+Every workspace reserves a `Plugins/` folder.
+
+```text
+IntellixWorkspace/
+
+├── Plugins/
+```
+
+This folder allows future expansion without changing the workspace structure.
+
+Possible future plugins include:
+
+- Docker
+- Kubernetes
+- Flutter
+- Unity
+- Git extensions
+- Database tools
+- Custom AI providers
+- Community plugins
+
+The Plugins folder may remain empty until plugins are installed.
 
 ## 🤖 AI Model Architecture
 
