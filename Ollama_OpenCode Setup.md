@@ -16,7 +16,7 @@ ollama serve
 
 ---
 
-## 3. Check if Ollama is running
+## 3. Check if Ollama is running(on onother terminal tab)
 ```bash
 curl http://127.0.0.1:11434
 ```
