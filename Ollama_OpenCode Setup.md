@@ -114,9 +114,9 @@ opencode --version
 
 ---
 
-## 15. Configure OpenCode
+## 15. Configure OpenCode(come back to this after all sub 15's are over
 ```bash
-ollama launch opencode --config
+opencode -m ollama/qwen2.5-coder:3b
 ```
 **Purpose:** Configure OpenCode for local/cloud models.
 
@@ -138,7 +138,7 @@ ollama launch opencode --config
         "baseURL": "http://127.0.0.1:11434/v1"
       },
       "models": {
-        "qwen2.5-coder:7b": {
+        "qwen2.5-coder:3b": {
           "tools": true
         }
       }
