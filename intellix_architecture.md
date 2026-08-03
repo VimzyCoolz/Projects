@@ -370,3 +370,251 @@ Nothing is stored on Intellix servers unless the user explicitly chooses cloud s
 
 ##OUR IDE should focus on this ports on users local host 9320 if occupied add 1...
 
+
+
+# 🚀 Intellix IDE TODO Roadmap
+
+## 📋 Phase 0 — Planning
+- [x] Define product vision.
+- [x] Decide on Local-First architecture.
+- [x] Decide on Intellix Workspace.
+- [x] Define Runtime responsibilities.
+- [x] Define Workspace structure.
+- [x] Define Adapter architecture.
+- [x] Create architecture documentation.
+
+---
+
+# 🏗 Phase 1 — Proof of Concept (Highest Priority)
+
+Goal:
+Browser (Public URL) → Intellix Runtime (localhost) → AI Model
+
+## Runtime
+- [ ] Create Intellix Runtime project.
+- [ ] Choose default localhost port (9320).
+- [ ] Create Runtime API server.
+- [ ] Implement `/api/v1/health`.
+- [ ] Implement `/api/v1/version`.
+- [ ] Implement CORS support.
+- [ ] Test browser ↔ localhost communication.
+
+## Browser
+- [ ] Create simple test webpage.
+- [ ] Call Runtime health endpoint.
+- [ ] Display Runtime status.
+- [ ] Handle Runtime unavailable state.
+
+---
+
+# 🤖 Phase 2 — Local AI
+
+## Model Support
+- [ ] Connect llama.cpp.
+- [ ] Connect Ollama.
+- [ ] Connect LM Studio.
+- [ ] Design Engine Manager.
+
+## Chat
+- [ ] Implement `/api/v1/chat`.
+- [ ] Stream AI responses.
+- [ ] Display responses in browser.
+
+---
+
+# 📦 Phase 3 — Workspace
+
+## Workspace
+- [ ] Create Workspace.
+- [ ] Open Workspace.
+- [ ] Import Workspace.
+- [ ] Export Workspace.
+
+## Workspace Structure
+
+- [ ] Runtime/
+- [ ] Models/
+- [ ] Projects/
+- [ ] Memory/
+- [ ] Chat/
+- [ ] Settings/
+- [ ] Cache/
+- [ ] Plugins/
+- [ ] config.json
+
+## Configuration
+
+- [ ] Read config.json.
+- [ ] Save config.json.
+- [ ] Support relative paths.
+- [ ] Workspace versioning.
+
+---
+
+# 🧠 Phase 4 — Runtime
+
+## Runtime Managers
+
+- [ ] Workspace Manager.
+- [ ] Model Manager.
+- [ ] Engine Manager.
+- [ ] Memory Manager.
+- [ ] API Server.
+- [ ] Update Manager.
+
+---
+
+# 🤖 Phase 5 — AI Models
+
+## Sources
+
+- [ ] Hugging Face.
+- [ ] Local Folder.
+- [ ] USB.
+- [ ] Imported Workspace.
+
+## Model Management
+
+- [ ] Download models.
+- [ ] Delete models.
+- [ ] Update models.
+- [ ] Search models.
+- [ ] Verify downloaded models.
+
+---
+
+# 🔌 Phase 6 — Adapters
+
+## Local
+
+- [ ] llama.cpp Adapter.
+- [ ] Ollama Adapter.
+- [ ] LM Studio Adapter.
+
+## Cloud
+
+- [ ] OpenRouter Adapter.
+- [ ] OpenAI Adapter.
+- [ ] Anthropic Adapter.
+- [ ] Gemini Adapter.
+
+---
+
+# 💻 Phase 7 — IDE
+
+## Editor
+
+- [ ] Monaco Editor.
+- [ ] File Explorer.
+- [ ] Terminal.
+- [ ] AI Chat.
+- [ ] Settings.
+
+## Git
+
+- [ ] GitHub Authentication.
+- [ ] Clone Repository.
+- [ ] Commit.
+- [ ] Push.
+- [ ] Pull.
+- [ ] Branch Management.
+
+---
+
+# 🧠 Phase 8 — Memory
+
+- [ ] Conversation history.
+- [ ] AI memory.
+- [ ] Workspace memory.
+- [ ] Context restoration.
+
+---
+
+# 🌐 Phase 9 — Offline Mode
+
+- [ ] Offline AI chat.
+- [ ] Offline project editing.
+- [ ] Offline memory.
+- [ ] Offline workspace.
+- [ ] Detect internet availability.
+- [ ] Online / Offline indicator.
+
+---
+
+# ☁ Phase 10 — Cloud
+
+- [ ] Cloud login.
+- [ ] Cloud providers.
+- [ ] Optional cloud sync.
+- [ ] Workspace sync.
+
+---
+
+# 🔌 Phase 11 — Plugins
+
+- [ ] Plugin API.
+- [ ] Plugin Manager.
+- [ ] Install plugin.
+- [ ] Remove plugin.
+- [ ] Enable/Disable plugin.
+
+---
+
+# 🎨 Phase 12 — UI
+
+- [ ] Workspace creation wizard.
+- [ ] Runtime status.
+- [ ] Model Manager UI.
+- [ ] Download Manager.
+- [ ] Settings redesign.
+- [ ] Theme support.
+
+---
+
+# 🚀 Phase 13 — OpenHands Migration
+
+- [ ] Clone OpenHands.
+- [ ] Understand architecture.
+- [ ] Replace backend calls.
+- [ ] Connect Runtime.
+- [ ] Remove server-first logic.
+- [ ] Test local-first architecture.
+- [ ] Rebrand to Intellix IDE.
+
+---
+
+# 🧪 Phase 14 — Testing
+
+- [ ] Windows.
+- [ ] Linux.
+- [ ] macOS.
+- [ ] External SSD.
+- [ ] USB Drive.
+- [ ] Workspace portability.
+- [ ] Offline mode.
+- [ ] Cloud mode.
+
+---
+
+# 📚 Phase 15 — Documentation
+
+- [ ] Installation Guide.
+- [ ] Runtime Guide.
+- [ ] Workspace Guide.
+- [ ] Plugin Guide.
+- [ ] API Documentation.
+- [ ] Developer Documentation.
+
+---
+
+# 🎯 Future Ideas
+
+- [ ] Workspace encryption.
+- [ ] Workspace compression.
+- [ ] Workspace snapshots.
+- [ ] AI model marketplace.
+- [ ] Plugin marketplace.
+- [ ] Multi-workspace support.
+- [ ] Team workspaces.
+- [ ] LAN collaboration.
+
