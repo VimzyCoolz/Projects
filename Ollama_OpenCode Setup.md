@@ -122,6 +122,31 @@ ollama launch opencode --config
 
 ---
 
+## 15.1 Prepare the config
+```
+ nano ~/.config/opencode/config.json
+```
+## 15.2 paste this code and correct the exact name
+```
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama",
+      "options": {
+        "baseURL": "http://127.0.0.1:11434/v1"
+      },
+      "models": {
+        "qwen2.5-coder:7b": {
+          "tools": true
+        }
+      }
+    }
+  }
+}
+```
+
 ## 16. Start OpenCode
 ```bash
 opencode
