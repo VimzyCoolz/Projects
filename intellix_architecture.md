@@ -1,47 +1,44 @@
 # Intellix IDE Architecture & Roadmap
 
-🎯 **Vision**  
-Build **Intellix IDE**, a browser-based AI development environment that is local-first rather than server-first.  
+🎯 **Vision**
+
+Build **Intellix IDE**, a browser-based AI development environment that is local-first rather than server-first.
+
 The user owns:
+
 * their models,
 * their AI memory,
 * their projects,
-* their workspace.  
+* their workspace.
 
 Your servers are not responsible for running the AI.
 
 ---
 
 ## 🏗 Foundation
-Instead of building everything from scratch:
-* **✅ Start from OpenHands.**
-* Clone it first.
-* Understand the architecture.
-* Gradually transform it into Intellix IDE.  
 
-The objective is not to rebrand OpenHands immediately but to evolve it into a different product.
+Instead of building everything from scratch:
+
+* **✅ Build directly on your own foundation.**
+* Structure everything from the ground up.
+* Design a clean architecture.
+* Gradually build out Intellix IDE.
+
+The objective is to establish a robust, independent product architecture.
 
 ---
 
-## 🔄 Biggest Architectural Change
+## 🔄 Architectural Model
 
-### Current OpenHands:
-```text
-Browser
-   │
-OpenHands Server
-   │
-LLM
-```
-
-### Intellix:
 ```text
 Browser
    │
 Intellix Runtime (localhost)
    │
 LLM
+
 ```
+
 The **Runtime** becomes the center of the system.
 
 ---
@@ -52,41 +49,42 @@ Instead of installing multiple components separately, users create or open an In
 
 The workspace contains following folders-some will contain files while others will come later time:
 
-- Runtime
-- Inference Engine
-- AI Models
-- Projects
-- AI Memory
-- Chat History
-- Settings
-- Cache
+* Runtime
+* Inference Engine
+* AI Models
+* Projects
+* AI Memory
+* Chat History
+* Settings
+* Cache
 
 The user chooses where the workspace is stored.
 
 Supported locations:
-- Internal SSD
-- External SSD
-- USB Drive
-- Custom Folder
+
+* Internal SSD
+* External SSD
+* USB Drive
+* Custom Folder
 
 The workspace is portable between devices. and is created at the beginning(first launch of the site) the workflow download ux will be "import or Create your workspace [import workspace] [ Create workspace]
 NB://During workspace creation:
 
-- Choose storage location.
-- Download Runtime.
-- Download inference engine.
-- Choose model source.
+* Choose storage location.
+* Download Runtime.
+* Download inference engine.
+* Choose model source.
 
 Examples:
 
-- Hugging Face
-- Local Folder
-- USB
-
-  then finally
-- Start IDE.
+* Hugging Face
+* Local Folder
+* USB
+then finally
+* Start IDE.
 
 ### Responsibilities of local runtime:
+
 * Download AI models.(from huggingface)
 * Manage installed models.
 * Start/stop models.
@@ -98,21 +96,23 @@ Examples:
 * Manage updates.
 * Connect to cloud providers when the user chooses.
 * Detect workspace.
-*Load configuration.
-*Start inference engine.
-*Stop inference engine.
-*Health monitoring.
-*API server.
-*Version management.
+* Load configuration.
+* Start inference engine.
+* Stop inference engine.
+* Health monitoring.
+* API server.
+* Version management.
 
 The Runtime becomes the local execution layer for Intellix IDE.
 
 ---
 
 ## 💻 Intellix IDE
+
 The browser application becomes lightweight.
 
 ### Responsibilities:
+
 * Monaco editor
 * AI chat
 * Terminal UI
@@ -126,6 +126,7 @@ No heavy AI work happens inside the browser.
 ---
 
 ## 🤖 AI Models
+
 The Runtime should support multiple providers.
 
 Local
@@ -146,6 +147,7 @@ The IDE never talks directly to these providers.
 ---
 
 ## 🔌 Adapter Architecture
+
 Instead of the IDE learning every provider:
 
 ```text
@@ -160,6 +162,7 @@ Intellix Runtime
  ├── OpenRouter Adapter
  ├── Anthropic Adapter
  └── Future Adapters
+
 ```
 
 The IDE always speaks one API. Only the Runtime translates requests.
@@ -167,9 +170,11 @@ The IDE always speaks one API. Only the Runtime translates requests.
 ---
 
 ## 📦 Portable Workspace
+
 The Runtime stores workspaces.
 
 ### Example Directory Structure:
+
 ```text
 IntellixWorkspace/
 
@@ -188,6 +193,7 @@ IntellixWorkspace/
 ├── Settings/
 │
 └── Cache/
+
 ```
 
 Users choose where to save it (e.g., SSD, HDD, USB drive, External SSD).
@@ -213,52 +219,53 @@ The browser simply requests them.
 ---
 
 ## 🖥 Model Storage
+
 Users decide where models live (Internal SSD, External SSD, USB drive). The Runtime remembers those locations.
 
 ---
 
 ## 🧠 Memory
+
 Memory is stored locally (conversations, AI context, workspace state, settings). Everything belongs to the user.
 
 ---
 
 ## ☁ Cloud
+
 Cloud is optional. Users may choose Local Runtime or Cloud Provider. Local-first remains the default philosophy.
 
 ---
 
 ## 🎨 UI Changes
+
 LLM settings become structured like:
+
 * **LLM**
-  * **Cloud**(which already exists on openhands)
-    * • OpenRouter
-    * • OpenAI
-    * • Anthropic
-  * **Local**
-    * • NO NEED TO DOWNLOAD LOCAL AI ENGINES AGAIN SO HERE WE WILL USE IT WHERE USER CAN SEARCH AI MODEL FROM HUGGING FACE AND DOWNLOAD IT TO HIS WORKSPACE
-   
-      
+* **Cloud**
+* • OpenRouter
+* • OpenAI
+* • Anthropic
 
----
 
-## 🔤 Rebranding Strategy
-Don't rename everything immediately.
+* **Local**
+* • USE IT WHERE USER CAN SEARCH AI MODEL FROM HUGGING FACE AND DOWNLOAD IT TO HIS WORKSPACE
 
-* **Phase 1:** Learn OpenHands. Make it work.
-* **Phase 2:** Change architecture. Add Runtime.
-* **Phase 3:** Rename classes. Rename branding. Update documentation.
 
-Using IDE refactoring tools is safer than global text replacement for code symbols.
+
+
 
 ---
 
 ## 💰 Business Philosophy
-Instead of charging for inference:  
+
+Instead of charging for inference:
+
 Users provide their own compute. They choose their models, their storage, and their hardware. This keeps your infrastructure costs low while giving users more control.
 
 ---
 
 ## 📈 Long-Term Vision
+
 ```text
                  Intellix IDE
                        │
@@ -272,6 +279,7 @@ Users provide their own compute. They choose their models, their storage, and th
      ├──────────────┬──┴───────┬──────────┤
      ▼              ▼          ▼          ▼
 Ollama         llama.cpp   OpenRouter   LM Studio
+
 ```
 
 ## 📌 Other Important Components
@@ -294,6 +302,7 @@ IntellixWorkspace/
 ├── Plugins/
 ├── Cache/
 └── config.json
+
 ```
 
 Example `config.json`:
@@ -308,6 +317,7 @@ Example `config.json`:
   "workspaceName": "My Workspace",
   "theme": "dark"
 }
+
 ```
 
 The Runtime reads this file during startup to automatically restore the user's workspace.
@@ -322,20 +332,21 @@ Every workspace reserves a `Plugins/` folder.
 IntellixWorkspace/
 
 ├── Plugins/
+
 ```
 
 This folder allows future expansion without changing the workspace structure.
 
 Possible future plugins include:
 
-- Docker
-- Kubernetes
-- Flutter
-- Unity
-- Git extensions
-- Database tools
-- Custom AI providers
-- Community plugins
+* Docker
+* Kubernetes
+* Flutter
+* Unity
+* Git extensions
+* Database tools
+* Custom AI providers
+* Community plugins
 
 The Plugins folder may remain empty until plugins are installed.
 
@@ -343,45 +354,42 @@ The Plugins folder may remain empty until plugins are installed.
 
 Model Sources
 
-- Hugging Face
-- Local Folder
-- USB
-- Imported Workspace
+* Hugging Face
+* Local Folder
+* USB
+* Imported Workspace
 
 Inference Engines
 
-- Ollama
-- LM Studio
-- llama.cpp
-
-
+* Ollama
+* LM Studio
+* llama.cpp
 
 ## 🔐 User Ownership
 
 Users own:
 
-- their models
-- their projects
-- their conversations
-- their AI memory
-- their workspace
+* their models
+* their projects
+* their conversations
+* their AI memory
+* their workspace
 
 Nothing is stored on Intellix servers unless the user explicitly chooses cloud services.
 
-##OUR IDE should focus on this ports on users local host 9320 if occupied add 1...
-
-
+OUR IDE should focus on this ports on users local host 9320 if occupied add 1...
 
 # 🚀 Intellix IDE TODO Roadmap
 
 ## 📋 Phase 0 — Planning
-- [x] Define product vision.
-- [x] Decide on Local-First architecture.
-- [x] Decide on Intellix Workspace.
-- [x] Define Runtime responsibilities.
-- [x] Define Workspace structure.
-- [x] Define Adapter architecture.
-- [x] Create architecture documentation.
+
+* [x] Define product vision.
+* [x] Decide on Local-First architecture.
+* [x] Decide on Intellix Workspace.
+* [x] Define Runtime responsibilities.
+* [x] Define Workspace structure.
+* [x] Define Adapter architecture.
+* [x] Create architecture documentation.
 
 ---
 
@@ -391,63 +399,68 @@ Goal:
 Browser (Public URL) → Intellix Runtime (localhost) → AI Model
 
 ## Runtime
-- [ ] Create Intellix Runtime project.
-- [ ] Choose default localhost port (9320).
-- [ ] Create Runtime API server.
-- [ ] Implement `/api/v1/health`.
-- [ ] Implement `/api/v1/version`.
-- [ ] Implement CORS support.
-- [ ] Test browser ↔ localhost communication.
+
+* [ ] Create Intellix Runtime project.
+* [ ] Choose default localhost port (9320).
+* [ ] Create Runtime API server.
+* [ ] Implement `/api/v1/health`.
+* [ ] Implement `/api/v1/version`.
+* [ ] Implement CORS support.
+* [ ] Test browser ↔ localhost communication.
 
 ## Browser
-- [ ] Create simple test webpage.
-- [ ] Call Runtime health endpoint.
-- [ ] Display Runtime status.
-- [ ] Handle Runtime unavailable state.
+
+* [ ] Create simple test webpage.
+* [ ] Call Runtime health endpoint.
+* [ ] Display Runtime status.
+* [ ] Handle Runtime unavailable state.
 
 ---
 
 # 🤖 Phase 2 — Local AI
 
 ## Model Support
-- [ ] Connect llama.cpp.
-- [ ] Connect Ollama.
-- [ ] Connect LM Studio.
-- [ ] Design Engine Manager.
+
+* [ ] Connect llama.cpp.
+* [ ] Connect Ollama.
+* [ ] Connect LM Studio.
+* [ ] Design Engine Manager.
 
 ## Chat
-- [ ] Implement `/api/v1/chat`.
-- [ ] Stream AI responses.
-- [ ] Display responses in browser.
+
+* [ ] Implement `/api/v1/chat`.
+* [ ] Stream AI responses.
+* [ ] Display responses in browser.
 
 ---
 
 # 📦 Phase 3 — Workspace
 
 ## Workspace
-- [ ] Create Workspace.
-- [ ] Open Workspace.
-- [ ] Import Workspace.
-- [ ] Export Workspace.
+
+* [ ] Create Workspace.
+* [ ] Open Workspace.
+* [ ] Import Workspace.
+* [ ] Export Workspace.
 
 ## Workspace Structure
 
-- [ ] Runtime/
-- [ ] Models/
-- [ ] Projects/
-- [ ] Memory/
-- [ ] Chat/
-- [ ] Settings/
-- [ ] Cache/
-- [ ] Plugins/
-- [ ] config.json
+* [ ] Runtime/
+* [ ] Models/
+* [ ] Projects/
+* [ ] Memory/
+* [ ] Chat/
+* [ ] Settings/
+* [ ] Cache/
+* [ ] Plugins/
+* [ ] config.json
 
 ## Configuration
 
-- [ ] Read config.json.
-- [ ] Save config.json.
-- [ ] Support relative paths.
-- [ ] Workspace versioning.
+* [ ] Read config.json.
+* [ ] Save config.json.
+* [ ] Support relative paths.
+* [ ] Workspace versioning.
 
 ---
 
@@ -455,12 +468,12 @@ Browser (Public URL) → Intellix Runtime (localhost) → AI Model
 
 ## Runtime Managers
 
-- [ ] Workspace Manager.
-- [ ] Model Manager.
-- [ ] Engine Manager.
-- [ ] Memory Manager.
-- [ ] API Server.
-- [ ] Update Manager.
+* [ ] Workspace Manager.
+* [ ] Model Manager.
+* [ ] Engine Manager.
+* [ ] Memory Manager.
+* [ ] API Server.
+* [ ] Update Manager.
 
 ---
 
@@ -468,18 +481,18 @@ Browser (Public URL) → Intellix Runtime (localhost) → AI Model
 
 ## Sources
 
-- [ ] Hugging Face.
-- [ ] Local Folder.
-- [ ] USB.
-- [ ] Imported Workspace.
+* [ ] Hugging Face.
+* [ ] Local Folder.
+* [ ] USB.
+* [ ] Imported Workspace.
 
 ## Model Management
 
-- [ ] Download models.
-- [ ] Delete models.
-- [ ] Update models.
-- [ ] Search models.
-- [ ] Verify downloaded models.
+* [ ] Download models.
+* [ ] Delete models.
+* [ ] Update models.
+* [ ] Search models.
+* [ ] Verify downloaded models.
 
 ---
 
@@ -487,16 +500,16 @@ Browser (Public URL) → Intellix Runtime (localhost) → AI Model
 
 ## Local
 
-- [ ] llama.cpp Adapter.
-- [ ] Ollama Adapter.
-- [ ] LM Studio Adapter.
+* [ ] llama.cpp Adapter.
+* [ ] Ollama Adapter.
+* [ ] LM Studio Adapter.
 
 ## Cloud
 
-- [ ] OpenRouter Adapter.
-- [ ] OpenAI Adapter.
-- [ ] Anthropic Adapter.
-- [ ] Gemini Adapter.
+* [ ] OpenRouter Adapter.
+* [ ] OpenAI Adapter.
+* [ ] Anthropic Adapter.
+* [ ] Gemini Adapter.
 
 ---
 
@@ -504,117 +517,126 @@ Browser (Public URL) → Intellix Runtime (localhost) → AI Model
 
 ## Editor
 
-- [ ] Monaco Editor.
-- [ ] File Explorer.
-- [ ] Terminal.
-- [ ] AI Chat.
-- [ ] Settings.
+* [ ] Monaco Editor.
+* [ ] File Explorer.
+* [ ] Terminal.
+* [ ] AI Chat.
+* [ ] Settings.
 
 ## Git
 
-- [ ] GitHub Authentication.
-- [ ] Clone Repository.
-- [ ] Commit.
-- [ ] Push.
-- [ ] Pull.
-- [ ] Branch Management.
+* [ ] GitHub Authentication.
+* [ ] Clone Repository.
+* [ ] Commit.
+* [ ] Push.
+* [ ] Pull.
+* [ ] Branch Management.
 
 ---
 
 # 🧠 Phase 8 — Memory
 
-- [ ] Conversation history.
-- [ ] AI memory.
-- [ ] Workspace memory.
-- [ ] Context restoration.
+* [ ] Conversation history.
+* [ ] AI memory.
+* [ ] Workspace memory.
+* [ ] Context restoration.
 
 ---
 
 # 🌐 Phase 9 — Offline Mode
 
-- [ ] Offline AI chat.
-- [ ] Offline project editing.
-- [ ] Offline memory.
-- [ ] Offline workspace.
-- [ ] Detect internet availability.
-- [ ] Online / Offline indicator.
+* [ ] Offline AI chat.
+* [ ] Offline project editing.
+* [ ] Offline memory.
+* [ ] Offline workspace.
+* [ ] Detect internet availability.
+* [ ] Online / Offline indicator.
 
 ---
 
 # ☁ Phase 10 — Cloud
 
-- [ ] Cloud login.
-- [ ] Cloud providers.
-- [ ] Optional cloud sync.
-- [ ] Workspace sync.
+* [ ] Cloud login.
+* [ ] Cloud providers.
+* [ ] Optional cloud sync.
+* [ ] Workspace sync.
 
 ---
 
 # 🔌 Phase 11 — Plugins
 
-- [ ] Plugin API.
-- [ ] Plugin Manager.
-- [ ] Install plugin.
-- [ ] Remove plugin.
-- [ ] Enable/Disable plugin.
+* [ ] Plugin API.
+* [ ] Plugin Manager.
+* [ ] Install plugin.
+* [ ] Remove plugin.
+* [ ] Enable/Disable plugin.
 
 ---
 
 # 🎨 Phase 12 — UI
 
-- [ ] Workspace creation wizard.
-- [ ] Runtime status.
-- [ ] Model Manager UI.
-- [ ] Download Manager.
-- [ ] Settings redesign.
-- [ ] Theme support.
+* [ ] Workspace creation wizard.
+* [ ] Runtime status.
+* [ ] Model Manager UI.
+* [ ] Download Manager.
+* [ ] Settings redesign.
+* [ ] Theme support.
 
 ---
 
-# 🚀 Phase 13 — OpenHands Migration
+# 🧪 Phase 13 — Foundation Setup & Integration
 
-- [ ] Clone OpenHands.
-- [ ] Understand architecture.
-- [ ] Replace backend calls.
-- [ ] Connect Runtime.
-- [ ] Remove server-first logic.
-- [ ] Test local-first architecture.
-- [ ] Rebrand to Intellix IDE.
+
+
+* [ ] Initialize foundation architecture.
+
+
+* [ ] Implement core structure.
+
+
+* [ ] Connect Runtime.
+
+
+* [ ] Test local-first architecture.
+
+
+* [ ] Finalize Intellix IDE standalone branding.
+
+
 
 ---
 
 # 🧪 Phase 14 — Testing
 
-- [ ] Windows.
-- [ ] Linux.
-- [ ] macOS.
-- [ ] External SSD.
-- [ ] USB Drive.
-- [ ] Workspace portability.
-- [ ] Offline mode.
-- [ ] Cloud mode.
+* [ ] Windows.
+* [ ] Linux.
+* [ ] macOS.
+* [ ] External SSD.
+* [ ] USB Drive.
+* [ ] Workspace portability.
+* [ ] Offline mode.
+* [ ] Cloud mode.
 
 ---
 
 # 📚 Phase 15 — Documentation
 
-- [ ] Installation Guide.
-- [ ] Runtime Guide.
-- [ ] Workspace Guide.
-- [ ] Plugin Guide.
-- [ ] API Documentation.
-- [ ] Developer Documentation.
+* [ ] Installation Guide.
+* [ ] Runtime Guide.
+* [ ] Workspace Guide.
+* [ ] Plugin Guide.
+* [ ] API Documentation.
+* [ ] Developer Documentation.
 
 ---
 
 # 🎯 Future Ideas
 
-- [ ] Workspace encryption.
-- [ ] Workspace compression.
-- [ ] Workspace snapshots.
-- [ ] AI model marketplace.
-- [ ] Plugin marketplace.
-- [ ] Multi-workspace support.
-- [ ] Team workspaces.
-- [ ] LAN collaboration.
-
+* [ ] Workspace encryption.
+* [ ] Workspace compression.
+* [ ] Workspace snapshots.
+* [ ] AI model marketplace.
+* [ ] Plugin marketplace.
+* [ ] Multi-workspace support.
+* [ ] Team workspaces.
+* [ ] LAN collaboration.
