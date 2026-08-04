@@ -17,8 +17,6 @@ Your servers are not responsible for running the AI.
 
 ## 🏗 Foundation
 
-Instead of building everything from scratch:
-
 * **✅ Build directly on your own foundation.**
 * Structure everything from the ground up.
 * Design a clean architecture.
