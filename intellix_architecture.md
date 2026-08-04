@@ -3,6 +3,7 @@
 🎯 **Vision**
 
 Build **Intellix IDE**, a browser-based AI development environment that is local-first rather than server-first.
+when i say local i mean user runs it on his machine, so in web startup request user to insert base url of his server it can be local/github workspace/vps etc
 
 The user owns:
 
@@ -31,7 +32,7 @@ The objective is to establish a robust, independent product architecture.
 ```text
 Browser
    │
-Intellix Runtime (localhost)
+Intellix Runtime (localhost)/base url
    │
 LLM
 
@@ -41,7 +42,7 @@ The **Runtime** becomes the center of the system.
 
 ---
 
-## 📦 Intellix Workspace
+## 📦 Intellix Workspace(which will be created when user runs intellix backend)
 
 Instead of installing multiple components separately, users create or open an Intellix Workspace.
 
@@ -284,7 +285,7 @@ Ollama         llama.cpp   OpenRouter   LM Studio
 
 ### ⚙️ Configuration
 
-Each workspace contains a configuration file that allows Intellix Runtime to restore the user's environment automatically.
+Each workspace contains a configuration file that allows Intellix Runtime to restore the user's environment automatically using whether localhost or any valid base url provided by the user.
 
 Example:
 
