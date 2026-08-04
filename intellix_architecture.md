@@ -355,6 +355,23 @@ Nothing is stored on Intellix servers unless the user explicitly chooses cloud s
 
 OUR IDE should focus on this ports on users local host 9320 if occupied add 1...
 
+## runtime can be organised this way
+Runtime
+
+├── API Server
+
+├── Workspace Service
+
+├── Model Service
+
+├── Engine Service
+
+├── Memory Service
+
+├── Update Service
+
+├── Plugin Service
+
 # 🚀 Intellix IDE TODO Roadmap
 
 ## 📋 Phase 0 — Planning
