@@ -50,50 +50,27 @@ The workspace contains following folders-some will contain files while others wi
 
 * Runtime
 * Inference Engine
-* AI Models
+* AI Models(this will be downloaded when the user is on the web dashboard when user selects the model-because we have base url its easy to download to where base url is)
 * Projects
 * AI Memory
 * Chat History
 * Settings
 * Cache
 
-The user chooses where the workspace is stored.
-
-Supported locations:
-
-* Internal SSD
-* External SSD
-* USB Drive
-* Custom Folder
-
-The workspace is portable between devices. and is created at the beginning(first launch of the site) the workflow download ux will be "import or Create your workspace [import workspace] [ Create workspace]
-NB://During workspace creation:
-
-* Choose storage location.
-* Download Runtime.
-* Download inference engine.
-* Choose model source.
-
-Examples:
-
-* Hugging Face
-* Local Folder
-* USB
-then finally
-* Start IDE.
+The workspace is portable between devices. and is created at the beginning(first launch of the site) [import workspace] [ Create workspace]-when user selects import workspace it means the intellix runtime was already running this means we should only request for base url/local host address, when he chooses create workspace thats when we request this data: BASE/LOCAL URL, MODEL NAME(MODEL NAME SHOULD have SOMETHING LIKE ollama/) but we should not limit the user by only supporting ollama, user can download other inference onother time but our runtime currently will only download ollama inference engine
 
 ### Responsibilities of local runtime:
 
-* Download AI models.(from huggingface)
+* pull AI model using ollama(default) and if there is other engine user has installed support it
 * Manage installed models.
 * Start/stop models.
-* Expose a localhost API.
+* Expose a localhost/base url API.
 * Manage AI memory.
 * Manage projects.
 * import workspaces.
 * export workspaces.
 * Manage updates.
-* Connect to cloud providers when the user chooses.
+* download inference engine (ollama by default.)
 * Detect workspace.
 * Load configuration.
 * Start inference engine.
